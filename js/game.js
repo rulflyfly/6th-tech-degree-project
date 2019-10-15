@@ -135,7 +135,15 @@ const lose = (score) => {
     }
 };
 
+/*
+In this function I add a condition ($('ul li').length !== 0) because
+if the user guessed all 5 letters wrong in a row from the first try
+and phrase was removed from the screen both $('ul li').length and
+matchedLetters would be equal to 0 and the win overlay showed;
+*/
+
 const win = (matchedLetters) => {
+    if ($('ul li').length !== 0) {
     if ($('ul li').length === matchedLetters) {
             
         $('#overlay').show().removeClass('lose').addClass('win');
@@ -145,6 +153,7 @@ const win = (matchedLetters) => {
         reset($('button'), $('#phrase ul div'));
  
     }
+};
 };
 
 const reset = (btnCollection, phrase) => {
