@@ -26,7 +26,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   display: flex;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 li, ol, ul {
