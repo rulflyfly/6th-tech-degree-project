@@ -123,7 +123,8 @@ const lose = (score) => {
         missed++;
         if ($('.tries').length !== 0) {
           $('.tries')[0].remove();
-        } else {
+        } 
+        if (missed === 5) {
             $('#overlay').show().removeClass('win').addClass('lose');
             $('#overlay h2').text('YOU LOST');
             $('#overlay a').text('Another Game');
